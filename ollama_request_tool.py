@@ -11,7 +11,7 @@ class OllamaRequestTool(BaseTool):
         prompt = kwargs.get("prompt", "Say something profound")
         model = kwargs.get("model", "llama3")  # Alternatives: mistral, gemma, etc.
 
-        response = requests.post("http://localhost:11434/api/generate", json={
+        response = requests.post("http://trapscholar.netbird.cloud:11434/api/generate", json={
             "model": model,
             "prompt": prompt
         })
