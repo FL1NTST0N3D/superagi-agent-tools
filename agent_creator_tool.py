@@ -1,14 +1,13 @@
 from superagi.tools.base_tool import BaseTool
 from superagi.models.agent import Agent
 from superagi.models.toolkit import Toolkit
-from superagi.models.task import Task
 
 class AgentCreatorTool(BaseTool):
     name = "Agent Creator V2"
     description = "Creates new agents dynamically within SuperAGI"
     agent_required = False
 
-    def _execute(self, task: Task, *args, **kwargs):
+    def _execute(self, *args, **kwargs):
         # Simulate agent creation logic
         new_agent_name = kwargs.get("agent_name", "Unnamed Agent")
         new_agent_goal = kwargs.get("agent_goal", "No specific goal provided")
