@@ -6,11 +6,11 @@ class OllamaRequestTool(BaseTool):
     description = "Sends prompts to a locally running Ollama instance and retrieves responses"
     agent_required = False
 
-    def _execute(self, task: Task, *args, **kwargs):
+    def _execute(self, *args, **kwargs):
         prompt = kwargs.get("prompt", "Say something profound")
         model = kwargs.get("model", "llama3")  # Alternatives: mistral, gemma, etc.
 
-        response = requests.post("http://trapscholar.netbird.cloud:11434/api/generate", json={
+        response = requests.post("http://gpu.tsc.tekoda.cloud:11434/api/generate", json={
             "model": model,
             "prompt": prompt
         })
