@@ -1,6 +1,5 @@
 import requests
 from superagi.tools.base_tool import BaseTool
-from superagi.models.task import Task
 
 class OllamaRequestTool(BaseTool):
     name = "Ollama Tool"
